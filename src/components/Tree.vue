@@ -71,7 +71,7 @@
       else{
         this.GetTree(this.$store.state.friendpath);
       }
-      alert("tree component just updated"); //how to call updated
+      // alert("tree component just updated"); //how to call updated
     }
   }
 </script>

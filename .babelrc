@@ -1,0 +1,7 @@
+{
+  "presets": [
+    [ "lastest", {
+      "es2015": { "modules": false }
+    }]
+  ]
+}
