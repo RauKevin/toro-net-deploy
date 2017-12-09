@@ -73,16 +73,7 @@
 
 
           <button class="btn btn-success" type="submit" >Register</button>
-          <!-- terms -->
-          <div class="col-12 text-left font-italic small">
-            By clicking Create Account, you agree to our
-            <a href="#">Terms</a>
-            and that you have read our
-            <a href="#">Data Policy</a>
-            , including our
-            <a href="#">Cookie Use</a>
-            . You may receive SMS Notifications from Toro-Net and can opt out at any time.
-          </div>
+          
 
       </form>
     </div>

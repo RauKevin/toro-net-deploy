@@ -1,30 +1,27 @@
 <template >
   <div id="app" >
-
-       <br>
-       <br>
        <br>
 
         <div class="container ">
-
-                 <!-- <hr>
-                <router-link to="/">Home</router-link>
-                <a v-if="!this.$store.state.user.displayName" href="/register" @click="register">Register</a>
-
-                <router-link v-else to="/login">Login</router-link>
-                <h1>{{ title }}</h1>
-                <hr /> -->
-                <div class="row" v-if="this.$store.state.user.displayName">
-                  <!-- <a v-if="this.$store.state.user.displayName" href="/logout" @click="logout"><button class="btn btn-danger" type="button" name="button">Logout</button></a> -->
-                  <Navbar-loggedin>  </Navbar-loggedin>
-                </div>
-              <div class="">
-                <br>
-                <hr>
-                <br>
-              </div>
-                <router-view />
-
+          <h1>{{ title }}</h1>
+          <div v-if="!this.$store.state.user.displayName">
+          <hr>
+          <router-link to="/">Home</router-link>
+          <!--<a v-if="!this.$store.state.user.displayName" href="/register" @click="register">Register</a>-->
+          <router-link to="/register">Register</router-link>
+          <router-link to="/login">Login</router-link>
+          
+          <hr />
+      <!-- Insert cool photo -->
+      <img src="toro.jpg" alt="Toro-Net" style="float: left;"> 
+          </div>
+          <div class="row" v-if="this.$store.state.user.displayName">
+          <a href="/logout" @click="logout">Logout</a>
+          <br>
+          <hr /> 
+        </div>
+      
+          <router-view />
 
         </div>
 
@@ -51,7 +48,7 @@ export default {
   // },
   data () {
     return {
-      title: 'Toro--Net',
+      title: 'Toro-Net',
 
     }
   },
@@ -73,12 +70,12 @@ export default {
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 30px;
+  margin-bottom: 3%;
 }
 
 h1, h2 {
@@ -92,5 +89,13 @@ ul {
 
 a {
   color: #42b983;
+  text-align: center;
+}
+.row {
+  text-align: center;
+  margin:auto;
+}
+.container {
+  padding: 3%;
 }
 </style>

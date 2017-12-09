@@ -12,18 +12,6 @@ import Home from './components/Home.vue'
 import Counter from './components/Counter.vue'
 import Login from './components/Login.vue'
 import Register from './components/Register.vue'
-import Navbar from './components/NavBar.vue'
-import HpContent from './components/HPContent.vue'
-import Footer from './components/Footer.vue'
-import Navbarloggedin from './components/NavBarLoggedin.vue'
-
-
-Vue.component('nav-bar', Navbar);
-Vue.component('hp-content', HpContent);
-Vue.component('footer-area', Footer);
-Vue.component('Navbar-loggedin', Navbarloggedin);
-
-
 
 const router = new VueRouter({
   mode: 'history',

@@ -12,7 +12,7 @@
       return { 
         target: "Jesus",
         node: 'node',
-        obj: [{name: "Me, Myself and I"}],
+        obj: [{name: this.$store.state.user.userName}],
         box_style: 'border: 2px solid rgb(104, 124, 145); border-radius: 25px; padding-left: 2px; padding-right: 2px; background: rgb(203, 225, 247); /* For browsers that do not support gradients */ background: -webkit-linear-gradient(left top, rgb(203, 225, 247), rgb(255, 255, 255)); /* For Safari 5.1 to 6.0 */ background: -o-linear-gradient(bottom right, rgb(203, 225, 247), rgb(255, 255, 255)); /* For Opera 11.1 to 12.0 */background: -moz-linear-gradient(bottom right, rgb(203, 225, 247), rgb(255, 255, 255)); /* For Firefox 3.6 to 15 */background: linear-gradient(to bottom right, rgb(203, 225, 247), rgb(255, 255, 255));font-family: Verdana;' 
       }
     },
@@ -66,10 +66,10 @@
       {
         console.log('friendpath is undefined');
         //set it equal to me, myself and I then return
-        this.GetTree([{name: "Me, Myself and I"}]);
+        this.GetTree([{name: this.$store.state.user.userName}]);
       }
       else{
-        this.GetTree(this.$store.state.friendpath);
+        this.GetTree(path);
       }
       // alert("tree component just updated"); //how to call updated
     }
@@ -78,14 +78,12 @@
 <style scoped>
 #tree_container 
 {
-    width: 60%;
     margin: auto;
     text-align: center;        
 }
 .node 
 {
     border: 2px solid rgb(104, 124, 145);
-    border-radius: 30px; 
     padding-left: 2px;
     padding-right: 2px;
     background: rgb(203, 225, 247);; /* For browsers that do not support gradients */    

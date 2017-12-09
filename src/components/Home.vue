@@ -1,57 +1,47 @@
 <template>
-
   <!-- if logged in -->
   <div class="container" v-if="this.$store.state.user.displayName">
-    <h5>Welcome {{this.$store.state.user.displayName}}! What's happening?</h5>
-    <br>
+
     <div class="row">
 
-              <!-- <div class="col-sm-6">
+      <!-- <div class="col-sm-6">
+      </div> -->
 
-              </div> -->
+      <div class=" col-sm-8">
 
-              <div class=" col-sm-7">
+        <feed></feed>
 
-                <feed></feed>
-                    <!--<br>
-                        <div class="form-group">
-                          <input type="text" class="form-control" id="title" placeholder="Title" v-model="title">
-                        </div>
-                          <div class="form-group">
-                            <textarea class="form-control" id="body" rows="this.textareaHeight" style="overflow:hidden"  placeholder="Write your thoughts here..." v-on:click="expandTextarea()" v-model="body">                 </textarea>
-                          </div>
-                        <button class="btn btn-primary" @click="addPost()">Post!</button>
-                    <hr>-->
-              </div>
-            <div class=" col-sm-1"></div>
-            <div class=" col-sm-4">
-                  <!-- <div class="sidebar-nav-fixed affix">
-                    <div class="demo-content bg-alt">Tree</div>
+      </div>
+      <div class=" col-sm-1"></div>
+      <div class=" col-sm-3">
+            <!-- <div class="sidebar-nav-fixed affix">
+              <div class="demo-content bg-alt">Tree</div>
 
-                  </div> -->
-                  <!-- <h1>TREEEEEEE</h1> -->
-                  <h2>Friends </h2>
-                  <tree> </tree>
-            </div>
+            </div> -->
+            <!-- <h1>TREEEEEEE</h1> -->
+            <tree> </tree>
+      </div>
     </div>
 
 </div>
 
   <!-- if not logged in -->
+  <!--
   <div class="container" v-else>
 
-    <!-- navbar loaded -->
+    <!-- navbar loaded 
       <nav-bar> </nav-bar>
 
-      <!--Home page content loaded  -->
+      <!--Home page content loaded  
       <hp-content> </hp-content>
 
       <hr>
 
-      <!-- footer loaded  -->
+      <!-- footer loaded 
       <footer-area> </footer-area>
 
   </div>
+  -->
 </template>
 
 <style>
@@ -90,11 +80,6 @@ export default {
       textareaHeight:50,
 
     };
-  },
-  methods: {
-    addPost() {
-      // this.$store.dispatch('addPost', this.$store.state.posts)
-    }
   },
   mounted() {
 
@@ -137,4 +122,5 @@ export default {
 .demo-content.bg-alt{
   background: #778899;
 }
+
 </style>

@@ -1,8 +1,8 @@
 <template>
   <div class="columns">
-      <h3> Add Post </h3>
+      <h5 style="text-align:left;">Welcome {{this.$store.state.user.displayName}}! What's happening?</h5>
       <postcard></postcard>
-      <h3>My Feed</h3>
+      <br>
 
       <div v-for="post in posts">
         <div @click="getTree" class="container">
@@ -12,13 +12,12 @@
           </div>
           <div>
             <div class="postedBy">Posted by: {{post.user}}</div>
-            <div class="postedOn"> - {{post.createdOn}}</div>
+            <div class="postedOn"> {{post.createdOn}}</div>
           </div>
 
         </div>
         <br>
       </div>  
-      <p>-- END FEED --</p>
  
   </div>
 </template>
@@ -66,7 +65,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .container {
-  background-color: lightgrey;
+  background-color: rgb(203, 225, 247);
+  border: 1px solid black;
   padding: 10px;
   margin: auto;
 
@@ -78,7 +78,7 @@ export default {
   text-align: left;
 }
 .postedOn {
-  text-align: right;
+  text-align: left;
 }
 
 </style>
